@@ -14,7 +14,7 @@ public class LoginController {
     public String login(@RequestParam(defaultValue = "", required = true) String login,
                         @RequestParam(defaultValue = "", required = true) String pass) {
         if (LOGIN.equals(login) && PASS.equals(pass)) {
-            return "main";
+            return "redirect:/main";
         }
         return "index";
     }

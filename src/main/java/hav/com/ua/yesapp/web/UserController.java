@@ -3,18 +3,18 @@ package hav.com.ua.yesapp.web;
 import hav.com.ua.yesapp.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class MainPageController {
+public class UserController {
 
     @Autowired
     private UserRepository userRepository;
 
-    @RequestMapping("/main")
-    public String main(Model model) {
-        model.addAttribute("users", userRepository.findAll());
-        return "main";
+    @RequestMapping("/user/delete/{id}")
+    public String delete(@PathVariable Long id) {
+        userRepository.deleteById(id);
+        return "redirect:/main";
     }
 }

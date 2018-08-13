@@ -10,7 +10,9 @@
 <body class="container">
     <c:import url="utils/header.jsp"/>
     <h2>Главная страница</h2>
-
+        <c:forEach var="u" items="${users}">
+            ${u}<a href="/user/delete/${u.id}">delete</a><br>
+        </c:forEach>
     <c:import url="utils/footer.jsp"/>
 </body>
 </html>
