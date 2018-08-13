@@ -9,12 +9,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class InitConfig {
-//
-//        @Autowired
-//    private ConstantRepository constantRepository;
-//
-//        @Autowired
-//    private UserRepository userRepository;
 
     @Bean
     @Autowired

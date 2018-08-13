@@ -24,15 +24,15 @@ public class Utils {
 
     @PostConstruct
     private void foo() {
+
         Constant isInitiated = constantRepository.findByName(ConstantNames.IS_DB_INITIATED.toString());
         String dbinit = System.getProperty("dbinit");
-//        System.out.println(dbinit);
+
         if ("true".equals(dbinit)) {
             if (isInitiated == null) {
                 isInitiated = new Constant();
                 isInitiated.setName(ConstantNames.IS_DB_INITIATED.toString());
                 isInitiated.setType(ConstantType.BOOLEAN);
-//                isInitiated.setValue("false");
             }
             isInitiated.setValue("false");
             constantRepository.save(isInitiated);

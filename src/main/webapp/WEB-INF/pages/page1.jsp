@@ -9,7 +9,7 @@
 </head>
 <body class="container">
     <c:import url="utils/header.jsp"/>
-    <h2>Главная страница</h2>
+    <h2>Главная страница page 1</h2>
 
     <c:import url="utils/footer.jsp"/>
 </body>
